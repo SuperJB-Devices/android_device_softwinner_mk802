@@ -10,7 +10,7 @@ on early-init
 	symlink /storage/sdcard1 /mnt/extsd
 
 on fs
-    mount ext4 /dev/block/nandd /system wait ro
+    mount ext4 /dev/block/nandd /system wait rw
     mount ext4 /dev/block/nande /data wait noatime nosuid nodev
     mount ext4 /dev/block/nandh /cache wait noatime nosuid nodev
 
@@ -39,18 +39,18 @@ on boot
 	insmod /system/lib/modules/ump.ko
 	insmod /system/lib/modules/mali.ko
 	# touchscreen drivers
-	insmod /system/lib/modules/ft5x_ts.ko
-	insmod /system/lib/modules/goodix_touch_3F.ko
-	insmod /system/lib/modules/goodix_touch.ko
-	insmod /system/lib/modules/gt801_2plus1.ko
-	insmod /system/lib/modules/ssd253x-ts.ko
-	insmod /system/lib/modules/Novatek_TouchDriver.ko
+	#insmod /system/lib/modules/ft5x_ts.ko
+	#insmod /system/lib/modules/goodix_touch_3F.ko
+	#insmod /system/lib/modules/goodix_touch.ko
+	#insmod /system/lib/modules/gt801_2plus1.ko
+	#insmod /system/lib/modules/ssd253x-ts.ko
+	#insmod /system/lib/modules/Novatek_TouchDriver.ko
 	# gsensor drivers
-	insmod /system/lib/modules/bma250.ko
-	insmod /system/lib/modules/mecs.ko
-	insmod /system/lib/modules/mxc622x.ko
-	insmod /system/lib/modules/mma7660.ko
-	insmod /system/lib/modules/kxte9.ko
+	#insmod /system/lib/modules/bma250.ko
+	#insmod /system/lib/modules/mecs.ko
+	#insmod /system/lib/modules/mxc622x.ko
+	#insmod /system/lib/modules/mma7660.ko
+	#insmod /system/lib/modules/kxte9.ko
 	# camera drivers
 	insmod /system/lib/modules/videobuf-core.ko
 	insmod /system/lib/modules/videobuf-dma-contig.ko   
@@ -68,7 +68,7 @@ on boot
 	insmod /system/lib/modules/mcs7830.ko
 	insmod /system/lib/modules/rtl8150.ko
 	# misc
-	chown system system /sys/class/timed_output/sun4i-vibrator/enable
+	#chown system system /sys/class/timed_output/sun4i-vibrator/enable
 	chown system system /sys/class/rfkill/rfkill0/state
 	chmod 0777  /sys/class/rfkill/rfkill0/state
 	write /sys/class/rfkill/rfkill0/state 0

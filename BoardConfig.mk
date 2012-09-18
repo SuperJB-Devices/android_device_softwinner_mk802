@@ -38,17 +38,17 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/softwinner/907/vibrator.c
+#BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/softwinner/907/vibrator.c
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 268435456
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 468435456
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 #EGL stuff
-BOARD_EGL_CFG := device/softwinner/907/egl.cfg
+BOARD_EGL_CFG := device/softwinner/mk802/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_USE_SKIA_LCDTEXT := true
 ENABLE_WEBGL := true
@@ -64,10 +64,10 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH = "/sys/class/android_usb/android0/f_mass_storag
 TARGET_USE_CUSTOM_SECOND_LUN_NUM := 1
 TARGET_RECOVERY_PRE_COMMAND := "echo -n boot-recovery | busybox dd of=/dev/block/nandf count=1 conv=sync; sync"
 BOARD_USE_LEGACY_TOUCHSCREEN := true
-TARGET_HARDWARE_INCLUDE := $(TOP)/device/softwinner/907/libraries/include
+TARGET_HARDWARE_INCLUDE := $(TOP)/device/softwinner/mk802/libraries/include
 TARGET_PROVIDES_INIT_RC := true
 TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/softwinner/907/releasetools/907_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/softwinner/mk802/releasetools/907_ota_from_target_files
 
 # Wifi stuff
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -91,14 +91,14 @@ WIFI_DRIVER_FW_PATH_PARAM := ""
 TARGET_CUSTOM_WIFI := ../../hardware/realtek/wlan/wifi_realtek.c
 
 # Beware: set only prebuilt OR source+config
-TARGET_PREBUILT_KERNEL := device/softwinner/907/kernel
+TARGET_PREBUILT_KERNEL := device/softwinner/mk802/kernel
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200 rw init=/init loglevel=8
 
-SW_BOARD_USES_GSENSOR_TYPE := "bma250"
-SW_BOARD_GSENSOR_DIRECT_X := "true"
-SW_BOARD_GSENSOR_DIRECT_Y := "true"
-SW_BOARD_GSENSOR_DIRECT_Z := "true"
-SW_BOARD_GSENSOR_XY_REVERT := "true"
+#SW_BOARD_USES_GSENSOR_TYPE := "bma250"
+#SW_BOARD_GSENSOR_DIRECT_X := "true"
+#SW_BOARD_GSENSOR_DIRECT_Y := "true"
+#SW_BOARD_GSENSOR_DIRECT_Z := "true"
+#SW_BOARD_GSENSOR_XY_REVERT := "true"
 
 COMMON_GLOBAL_CFLAGS += "-DICS_CAMERA_BLOB -DICS_AUDIO_BLOB"

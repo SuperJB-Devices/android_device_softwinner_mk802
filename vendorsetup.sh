@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_907-userdebug
-add_lunch_combo cm_907-userdebug
+add_lunch_combo full_mk802-userdebug
+add_lunch_combo cm_mk802-userdebug
