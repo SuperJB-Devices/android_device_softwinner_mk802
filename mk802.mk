@@ -59,6 +59,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.additionalmounts=/storage/sdcard1 \
 	ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1 \
 	persist.sys.vold.switchexternal=0 \
+	service.adb.root=1 \
 	ro.disable_phablet_ui=1
 
 DEVICE_PACKAGE_OVERLAYS := device/softwinner/mk802/overlay
@@ -120,6 +121,8 @@ PRODUCT_PACKAGES += \
 
 # CM9 apps
 PRODUCT_PACKAGES += \
+	SuperUser \
+	su \
 	com.android.future.usb.accessory
 
 # EXT4 Support
@@ -133,8 +136,8 @@ $(call inherit-product, build/target/product/full_base.mk)
 PRODUCT_AAPT_CONFIG := large xlarge mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-PRODUCT_NAME := full_mk802
-PRODUCT_DEVICE := mk802
+#PRODUCT_NAME := full_mk802
+#PRODUCT_DEVICE := mk802
 
 #TARGET_SCREEN_HEIGHT := 768
 #TARGET_SCREEN_WIDTH := 1024

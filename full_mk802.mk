@@ -13,23 +13,21 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/softwinner/mk802/mk802.mk)
-$(call inherit-product, device/softwinner/mk802/libraries/Android.mk)
-$(call inherit-product, device/softwinner/mk802/packages/Android.mk)
+$(call inherit-product, device/softwinner/mk802/mk802-blobs.mk)
+#$(call inherit-product, device/softwinner/mk802/libraries/Android.mk)
+#$(call inherit-product, device/softwinner/mk802/packages/Android.mk)
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, vendor/cm/config/gsm.mk)
 $(call inherit-product-if-exists, vendor/softwinner/mk802/mk802-vendor.mk)
 
+#Some CM
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_mk802
-PRODUCT_DEVICE := mk802
-PRODUCT_BRAND := Allwinner
-PRODUCT_MODEL := mk802
-PRODUCT_MANUFACTURER := Allwinner
-
-
-
-
-
-
+#PRODUCT_NAME := full_mk802
+#PRODUCT_DEVICE := mk802
+#PRODUCT_BRAND := Allwinner
+#PRODUCT_MODEL := mk802
+#PRODUCT_MANUFACTURER := Allwinner

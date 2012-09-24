@@ -17,8 +17,8 @@
 $(call inherit-product, device/softwinner/mk802/full_mk802.mk)
 
 # Inherit some common CM9 stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, device/softwinner/mk802/mk802-blobs.mk)
+#$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+#$(call inherit-product, device/softwinner/mk802/mk802-blobs.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_mk802

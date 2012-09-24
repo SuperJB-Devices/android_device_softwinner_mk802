@@ -57,17 +57,12 @@ PRODUCT_COPY_FILES += \
 	device/softwinner/mk802/prebuilt/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
 	device/softwinner/mk802/prebuilt/lib/liballwinner-ril.so:system/lib/liballwinner-ril.so \
 	device/softwinner/mk802/prebuilt/lib/hw/camera.exDroid.so:system/lib/hw/camera.exDroid.so \
-#	device/softwinner/mk802/prebuilt/lib/hw/sensors.exDroid.so:system/lib/hw/sensors.exDroid.so \
 	device/softwinner/mk802/prebuilt/lib/libMali.so:system/lib/libMali.so \
 	device/softwinner/mk802/prebuilt/lib/libUMP.so:system/lib/libUMP.so
 
-#	device/softwinner/mk802/prebuilt/lib/libMali.so:obj/lib/libMali.so \
-#	device/softwinner/mk802/prebuilt/lib/libUMP.so:obj/lib/libUMP.so
 
 # /system/usr
 PRODUCT_COPY_FILES += \
-	#device/softwinner/mk802/prebuilt/usr/idc/ft5x_ts.idc:system/usr/idc/ft5x_ts.idc \
-	#device/softwinner/mk802/prebuilt/usr/idc/Goodix-TS-board-3.idc:system/usr/idc/Goodix-TS-board-3.idc \
 	device/softwinner/mk802/prebuilt/usr/keylayout/axp20-supplyer.kl:system/usr/keylayout/axp20-supplyer.kl \
 	device/softwinner/mk802/prebuilt/usr/keylayout/sun4i-keyboard.kl:system/usr/keylayout/sun4i-keyboard.kl \
 	device/softwinner/mk802/prebuilt/usr/icu/icudt46l.dat:system/usr/icu/icudt46l.dat
@@ -88,6 +83,7 @@ $(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermedi
 $(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libUMP_intermediates)
 $(shell touch out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermediates/export_includes)
 $(shell touch out/target/product/mk802/obj/SHARED_LIBRARIES/libUMP_intermediates/export_includes)
+$(shell mkdir -p out/target/product/mk802/obj/lib/)
 $(shell cp device/softwinner/mk802/prebuilt/lib/libMali.so out/target/product/mk802/obj/lib/)
 $(shell cp device/softwinner/mk802/prebuilt/lib/libUMP.so out/target/product/mk802/obj/lib/)
 

@@ -11,8 +11,25 @@ on early-init
 
 on fs
     mount ext4 /dev/block/nandd /system wait rw
-    mount ext4 /dev/block/nande /data wait noatime nosuid nodev
-    mount ext4 /dev/block/nandh /cache wait noatime nosuid nodev
+
+#Allwinner hacks for data and cache - Corvus
+   # mount ext4 /dev/block/nande /data wait noatime nosuid nodev
+   # mount ext4 /dev/block/nandh /cache wait noatime nosuid nodev
+
+	wait /dev/block/nande
+        mount ext4 /dev/block/nande /data wait noatime nosuid nodev barrier=0
+        setupfs /dev/block/nande
+        umount /data
+        exec /system/bin/logwrapper /system/bin/e2fsck -y /dev/block/nande
+        exec /system/xbin/busybox mount -t ext4 -o noatime,nosuid,nodev,barrier=0,journal_checksum,noauto_da_alloc /dev/block/nande /data
+
+	mount ext4 /dev/block/nandh /cache wait noatime nosuid nodev barrier=0
+        setupfs /dev/block/nandh
+        umount /cache
+	exec /system/bin/logwrapper /system/bin/e2fsck -y /dev/block/nandh
+	exec /system/xbin/busybox mount -t ext4 -o noatime,nosuid,nodev,barrier=0,journal_checksum,noauto_da_alloc /dev/block/nandh /cache
+
+    	format_userdata /dev/block/nandi A10-MID
 
 on boot	
         # Enable interactive governor
@@ -126,7 +143,7 @@ service iprenew_eth0 /system/bin/dhcpcd -n
     oneshot
 
 service memsicd /system/bin/logwrapper /system/bin/memsicd
-   class troy
+   class memsicd
    oneshot
 
 on property:dev.bootcomplete=1
