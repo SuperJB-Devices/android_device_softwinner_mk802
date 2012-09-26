@@ -65,7 +65,7 @@ $(shell cp vendor/softwinner/mk802/propietary/lib/libUMP.so out/target/product/m
 PRODUCT_COPY_FILES += vendor/softwinner/mk802/propietary/etc/media_codecs.xml:system/etc/media_codecs.xml
 
 #Audio
-PRODUCT_COPY_FILES += vendor/softwinner/mk802/libraries/audio/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += device/softwinner/mk802/libraries/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
