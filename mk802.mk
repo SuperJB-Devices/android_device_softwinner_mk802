@@ -28,18 +28,6 @@ PRODUCT_COPY_FILES := \
         device/softwinner/mk802/init.sun4i.usb.rc:root/init.sun4i.usb.rc \
         device/softwinner/mk802/ueventd.sun4i.rc:root/ueventd.sun4i.rc
 
-#Bin files
-PRODUCT_COPY_FILES += \
-        device/softwinner/mk802/prebuilt/bin/fsck.exfat:system/bin/fsck.exfat \
-        device/softwinner/mk802/prebuilt/bin/mkfs.exfat:system/bin/mkfs.exfat \
-        device/softwinner/mk802/prebuilt/bin/mount.exfat:system/bin/mount.exfat \
-        device/softwinner/mk802/prebuilt/bin/ntfs-3g:system/bin/ntfs-3g \
-        device/softwinner/mk802/prebuilt/bin/ntfs-3g.probe:system/bin/ntfs-3g.probe \
-        device/softwinner/mk802/prebuilt/bin/mkntfs:system/bin/mkntfs \
-        device/softwinner/mk802/prebuilt/bin/reboot-recovery.sh:system/bin/reboot-recovery.sh \
-        device/softwinner/mk802/prebuilt/bin/usb_modeswitch:system/bin/usb_modeswitch \
-        device/softwinner/mk802/prebuilt/bin/rild:system/bin/rild
-
 #Etc files
 PRODUCT_COPY_FILES += \
         device/softwinner/mk802/prebuilt/etc/ppp/ip-down:system/etc/ppp/ip-down \
@@ -52,7 +40,6 @@ PRODUCT_COPY_FILES += \
         device/softwinner/mk802/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
         device/softwinner/mk802/prebuilt/etc/usb_modeswitch.sh:system/etc/usb_modeswitch.sh \
         device/softwinner/mk802/prebuilt/etc/vold.fstab:system/etc/vold.fstab
-#       device/softwinner/mk802/prebuilt/etc/camera.cfg:system/etc/camera.cfg \
 
 PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,device/softwinner/mk802/prebuilt/etc/init.d,system/etc/init.d)
@@ -60,31 +47,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,device/softwinner/mk802/prebuilt/etc/usb_modeswitch.d,system/etc/usb_modeswitch.d)
 
-#Lib files
-PRODUCT_COPY_FILES += \
-        device/softwinner/mk802/prebuilt/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
-        device/softwinner/mk802/prebuilt/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
-        device/softwinner/mk802/prebuilt/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
-        device/softwinner/mk802/prebuilt/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-        device/softwinner/mk802/prebuilt/lib/liballwinner-ril.so:system/lib/liballwinner-ril.so \
-        device/softwinner/mk802/prebuilt/lib/hw/camera.exDroid.so:system/lib/hw/camera.exDroid.so \
-        device/softwinner/mk802/prebuilt/lib/libMali.so:system/lib/libMali.so \
-        device/softwinner/mk802/prebuilt/lib/libUMP.so:system/lib/libUMP.so
-
-#Usr files
-PRODUCT_COPY_FILES += \
-        device/softwinner/mk802/prebuilt/usr/keylayout/axp20-supplyer.kl:system/usr/keylayout/axp20-supplyer.kl \
-        device/softwinner/mk802/prebuilt/usr/keylayout/sun4i-keyboard.kl:system/usr/keylayout/sun4i-keyboard.kl \
-        device/softwinner/mk802/prebuilt/usr/icu/icudt46l.dat:system/usr/icu/icudt46l.dat
-
-
 #Wifi files
 PRODUCT_COPY_FILES += \
         device/softwinner/mk802/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
-
-#Modules
-PRODUCT_COPY_FILES += \
-        $(call find-copy-subdir-files,*,device/softwinner/mk802/prebuilt/lib/modules,system/lib/modules)
 
 #Fix for Mali build
 $(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermediates)
