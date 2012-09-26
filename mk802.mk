@@ -42,10 +42,10 @@ PRODUCT_COPY_FILES += \
         device/softwinner/mk802/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
-        $(call find-copy-subdir-files,*,device/softwinner/mk802/prebuilt/etc/init.d,system/etc/init.d)
+        $(call find-copy-subdir-files,*,vendor/softwinner/mk802/propietary/etc/init.d,system/etc/init.d)
 
 PRODUCT_COPY_FILES += \
-        $(call find-copy-subdir-files,*,device/softwinner/mk802/prebuilt/etc/usb_modeswitch.d,system/etc/usb_modeswitch.d)
+        $(call find-copy-subdir-files,*,vendor/softwinner/mk802/propietary/etc/usb_modeswitch.d,system/etc/usb_modeswitch.d)
 
 #Wifi files
 PRODUCT_COPY_FILES += \
@@ -57,8 +57,8 @@ $(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libUMP_intermedia
 $(shell touch out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermediates/export_includes)
 $(shell touch out/target/product/mk802/obj/SHARED_LIBRARIES/libUMP_intermediates/export_includes)
 $(shell mkdir -p out/target/product/mk802/obj/lib/)
-$(shell cp device/softwinner/mk802/prebuilt/lib/libMali.so out/target/product/mk802/obj/lib/)
-$(shell cp device/softwinner/mk802/prebuilt/lib/libUMP.so out/target/product/mk802/obj/lib/)
+$(shell cp vendor/softwinner/mk802/propietary/lib/libMali.so out/target/product/mk802/obj/lib/)
+$(shell cp vendor/softwinner/mk802/propietary/lib/libUMP.so out/target/product/mk802/obj/lib/)
 
 
 #OMX
