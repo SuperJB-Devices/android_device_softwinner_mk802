@@ -1,10 +1,12 @@
 [
     {
         "repository": "corvusmod/android_hardware_realtek",
-        "target_path": "hardware/realtek"
+        "target_path": "hardware/realtek",
+        "branch": "jellybean"
     },
     {
         "repository": "SuperJB-Vendor/android_vendor_mk802",
-        "target_path": "vendor/softwinner/mk802"
+        "target_path": "vendor/softwinner/mk802",
+        "branch": "jellybean"
     }
 ]
