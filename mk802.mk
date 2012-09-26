@@ -165,7 +165,7 @@ PRODUCT_PACKAGES += \
         LiveWallpapers \
         LiveWallpapersPicker \
         MagicSmokeWallpapers \
-        HoloSpiralWallpaper
+        HoloSpiralWallpaper \
         VisualizationWallpapers \
         librs_jni
 
