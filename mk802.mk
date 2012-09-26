@@ -48,11 +48,11 @@ PRODUCT_COPY_FILES += \
         device/softwinner/mk802/prebuilt/etc/firmware/ath3k-1.fw:system/etc/firmware/ath3k-1.fw \
         device/softwinner/mk802/prebuilt/etc/firmware/ath3k-1.fw:system/vendor/firmware/ath3k-1.fw \
         device/softwinner/mk802/prebuilt/etc/3g_dongle.cfg:system/etc/3g_dongle.cfg \
-#       device/softwinner/mk802/prebuilt/etc/camera.cfg:system/etc/camera.cfg \
         device/softwinner/mk802/prebuilt/etc/gps.conf:system/etc/gps.conf \
         device/softwinner/mk802/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
         device/softwinner/mk802/prebuilt/etc/usb_modeswitch.sh:system/etc/usb_modeswitch.sh \
         device/softwinner/mk802/prebuilt/etc/vold.fstab:system/etc/vold.fstab
+#       device/softwinner/mk802/prebuilt/etc/camera.cfg:system/etc/camera.cfg \
 
 PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,device/softwinner/mk802/prebuilt/etc/init.d,system/etc/init.d)
