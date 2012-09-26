@@ -1,0 +1,10 @@
+[
+    {
+        "repository": "corvusmod/android_hardware_realtek",
+        "target_path": "hardware/realtek"
+    },
+    {
+        "repository": "SuperJB-Vendor/android_vendor_mk802",
+        "target_path": "vendor/softwinner/mk802"
+    }
+]

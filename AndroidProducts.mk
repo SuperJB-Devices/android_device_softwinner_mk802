@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_mk802.mk
+    $(LOCAL_DIR)/osr_mk802.mk

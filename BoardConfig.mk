@@ -28,17 +28,16 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
-#ARCH_ARM_HAVE_VFP := true
-#TARGET_ARCH_VARIANT_CPU := cortex-a9
-#TARGET_ARCH_VARIANT_FPU := neon
-#ARCH_ARM_HAVE_NEON := true
-#ARCH_ARM_HAVE_ARMV7A := true
+ARCH_ARM_HAVE_VFP := true
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_FPU := neon
+ARCH_ARM_HAVE_NEON := true
+ARCH_ARM_HAVE_ARMV7A := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 BOARD_HAVE_BLUETOOTH := true
-#BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/softwinner/907/vibrator.c
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
@@ -94,11 +93,5 @@ TARGET_CUSTOM_WIFI := ../../hardware/realtek/wlan/wifi_realtek.c
 TARGET_PREBUILT_KERNEL := device/softwinner/mk802/kernel
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := console=ttyS0,115200 rw init=/init loglevel=8
-
-#SW_BOARD_USES_GSENSOR_TYPE := "bma250"
-#SW_BOARD_GSENSOR_DIRECT_X := "true"
-#SW_BOARD_GSENSOR_DIRECT_Y := "true"
-#SW_BOARD_GSENSOR_DIRECT_Z := "true"
-#SW_BOARD_GSENSOR_XY_REVERT := "true"
 
 COMMON_GLOBAL_CFLAGS += "-DICS_CAMERA_BLOB -DICS_AUDIO_BLOB"
