@@ -5,7 +5,7 @@
         "branch": "jellybean"
     },
     {
-        "repository": "SuperJB-Vendor/android_vendor_mk802",
+        "repository": "SuperJB-Vendor/android_vendor_softwinner_mk802",
         "target_path": "vendor/softwinner/mk802",
         "branch": "jellybean"
     }
