@@ -30,16 +30,16 @@ PRODUCT_COPY_FILES := \
 
 #Etc files
 PRODUCT_COPY_FILES += \
-        device/softwinner/mk802/prebuilt/etc/ppp/ip-down:system/etc/ppp/ip-down \
-        device/softwinner/mk802/prebuilt/etc/ppp/ip-up:system/etc/ppp/ip-up \
-        device/softwinner/mk802/prebuilt/etc/ppp/call-pppd:system/etc/ppp/call-pppd \
-        device/softwinner/mk802/prebuilt/etc/firmware/ath3k-1.fw:system/etc/firmware/ath3k-1.fw \
-        device/softwinner/mk802/prebuilt/etc/firmware/ath3k-1.fw:system/vendor/firmware/ath3k-1.fw \
-        device/softwinner/mk802/prebuilt/etc/3g_dongle.cfg:system/etc/3g_dongle.cfg \
-        device/softwinner/mk802/prebuilt/etc/gps.conf:system/etc/gps.conf \
-        device/softwinner/mk802/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
-        device/softwinner/mk802/prebuilt/etc/usb_modeswitch.sh:system/etc/usb_modeswitch.sh \
-        device/softwinner/mk802/prebuilt/etc/vold.fstab:system/etc/vold.fstab
+        vendor/softwinner/mk802/propietary/etc/ppp/ip-down:system/etc/ppp/ip-down \
+        vendor/softwinner/mk802/propietary/etc/ppp/ip-up:system/etc/ppp/ip-up \
+        vendor/softwinner/mk802/propietary/etc/ppp/call-pppd:system/etc/ppp/call-pppd \
+        vendor/softwinner/mk802/propietary/etc/firmware/ath3k-1.fw:system/etc/firmware/ath3k-1.fw \
+        vendor/softwinner/mk802/propietary/etc/firmware/ath3k-1.fw:system/vendor/firmware/ath3k-1.fw \
+        vendor/softwinner/mk802/propietary/etc/3g_dongle.cfg:system/etc/3g_dongle.cfg \
+        vendor/softwinner/mk802/propietary/etc/gps.conf:system/etc/gps.conf \
+        vendor/softwinner/mk802/propietary/etc/media_profiles.xml:system/etc/media_profiles.xml \
+        vendor/softwinner/mk802/propietary/etc/usb_modeswitch.sh:system/etc/usb_modeswitch.sh \
+        vendor/softwinner/mk802/propietary/etc/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
         $(call find-copy-subdir-files,*,vendor/softwinner/mk802/propietary/etc/init.d,system/etc/init.d)
@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
 
 #Wifi files
 PRODUCT_COPY_FILES += \
-        device/softwinner/mk802/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+        vendor/softwinner/mk802/propietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 #Fix for Mali build
 $(shell mkdir -p out/target/product/mk802/obj/SHARED_LIBRARIES/libMali_intermediates)
@@ -62,10 +62,10 @@ $(shell cp vendor/softwinner/mk802/propietary/lib/libUMP.so out/target/product/m
 
 
 #OMX
-PRODUCT_COPY_FILES += device/softwinner/mk802/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += vendor/softwinner/mk802/propietary/etc/media_codecs.xml:system/etc/media_codecs.xml
 
 #Audio
-PRODUCT_COPY_FILES += device/softwinner/mk802/libraries/audio/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += vendor/softwinner/mk802/libraries/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
