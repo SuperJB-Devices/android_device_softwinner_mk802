@@ -165,3 +165,5 @@ PRODUCT_PACKAGES += \
 	static_busybox \
         make_ext4fs \
         e2fsck
+
+$(call inherit-product-if-exists, vendor/softwinner/mk802/mk802-vendor.mk)
