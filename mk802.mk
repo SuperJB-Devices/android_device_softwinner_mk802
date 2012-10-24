@@ -103,6 +103,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
         ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1 \
         persist.sys.vold.switchexternal=0 \
         service.adb.root=1 \
+	ro.allwinner.device=1 \
         ro.disable_phablet_ui=1
 
 DEVICE_PACKAGE_OVERLAYS := device/softwinner/mk802/overlay
