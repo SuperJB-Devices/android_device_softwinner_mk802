@@ -1,17 +1,17 @@
 # Specify phone tech before including full_phone
-$(call inherit-product, vendor/osr/config/gsm.mk)
+#$(call inherit-product, vendor/osr/config/gsm.mk)
 
 PRODUCT_RELEASE_NAME := mk802
 
 # Inherit some common OSR stuff.
-#$(call inherit-product, vendor/osr/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/osr/config/common_full_tablet_wifionly.mk)
 
 $(call inherit-product, device/softwinner/mk802/full_mk802.mk)
 
 # Add Google apps
-#$(call inherit-product, vendor/google/minimal.mk)
-#$(call inherit-product, vendor/google/products/maps_support.mk)
-#$(call inherit-product, vendor/google/products/youtube_support.mk)
+$(call inherit-product, vendor/google/minimal.mk)
+$(call inherit-product, vendor/google/products/maps_support.mk)
+$(call inherit-product, vendor/google/products/youtube_support.mk)
 
 # Addons personal (call files from vendor/osr/prebuilt/app)
 $(call inherit-product, vendor/osr/addons/superatmel.mk)
